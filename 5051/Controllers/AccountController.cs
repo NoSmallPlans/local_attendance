@@ -74,7 +74,6 @@ namespace _5051.Controllers
                 return RedirectToAction("Options", "AdminPanel");
             } else if (model.Username.ToLower() == "kiosk"){
                 return RedirectToAction("Index", "Kiosk");
-
             } else {
                 //return RedirectToAction("Report", "RemoteStudent");
 
