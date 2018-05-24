@@ -50,8 +50,5 @@ namespace _5051.Controllers
                     new { controller = "RemoteStudent", action = "Report", username = model.Username }));
             }
         }
-
-     
-        #endregion
     }
 }
