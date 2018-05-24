@@ -75,9 +75,7 @@ namespace _5051.Controllers
             } else if (model.Username.ToLower() == "kiosk"{
                 return RedirectToAction("Index", "Kiosk");
             } else {
-                //return RedirectToAction("Report", "RemoteStudent");
-
-                return RedirectToAction("Report", new RouteValueDictionary(
+                    return RedirectToAction("Report", new RouteValueDictionary(
                     new { controller = "RemoteStudent", action = "Report", username = model.Username }));
             }
         }
