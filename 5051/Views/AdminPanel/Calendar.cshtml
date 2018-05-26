@@ -3,11 +3,22 @@
 }
 
 <h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
 
 <form>
   <div class="form-group">
     <label for="exampleFormControlFile1">Upload Excel Calendar</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" class="form-control-file" id="calendarSubmit">
   </div>
 </form>
+<div style="display: none" id="calImage">
+  <p>Something goes here</p>
+</div>
+
+<script>
+  window.onload(function(){
+    var calSub = document.getElementById("calendarSubmit");
+    if(calSub){
+      calSub.onclick = function(){calSub.style.display = "block";}
+    }
+  });
+</script>
