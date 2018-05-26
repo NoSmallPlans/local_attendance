@@ -2,13 +2,14 @@
     ViewBag.Title = "Calendar Upload";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2 id="tester">@ViewBag.Title</h2>
 
 <form>
   <div class="form-group">
     <label for="exampleFormControlFile1">Upload Excel Calendar</label>
-    <input type="file" class="form-control-file" id="calendarSubmit">
+    <input type="file" class="form-control-file">
   </div>
+  <button id="fakeSub">Upload</button>
 </form>
 <div style="display: none" id="calImage">
   <p>Something goes here</p>
@@ -16,9 +17,9 @@
 
 <script>
   window.onload = function(){
-    var calSub = document.getElementById("calendarSubmit");
-    if(calSub){
-      calSub.onclick = function(){calSub.style.display = "block";}
+    var fakeSub = document.getElementById("fakeSub");
+    if(fakeSub){
+      fakeSub.onclick = function(){fakeSub.style.display = "block";}
     }
   }
 </script>
