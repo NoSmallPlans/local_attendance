@@ -1,8 +1,8 @@
 @{
-    ViewBag.Title = "Success - Calendar Sync Complete";
+    ViewBag.Title = "Calendar Upload";
 }
 
-<h2 id="successMsg" style="display: none; color: green; font-style: italic; font-weight: bold;">@ViewBag.Title</h2>
+<h2 id="successMsg" style="display: none; color: green; font-style: italic; font-weight: bold;">Success - Calendar Sync Complete</h2>
 
 <form style="padding-top: 30px">
   <div class="form-group">
@@ -19,12 +19,11 @@
   window.onload = function(){
     var fakeSub = document.getElementById("fakeSub");
     var successMsg = document.getElementById("successMsg");
-    if(fakeSub){
-      fakeSub.onclick = function(){calImage.style.display = "block"};
-    }
-    
     if(fakeSub && successMsg){
-      fakeSub.onclick = function(){successMsg.style.display = "block"};
+      fakeSub.onclick = function(){
+          calImage.style.display = "block";
+          successMsg.style.display = "block";
+        };
     }
   }
 </script>
