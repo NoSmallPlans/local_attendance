@@ -6,7 +6,7 @@
     <title>@ViewBag.Title Attendify</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link rel="icon" type="image/png" href="~/Content/favicons/favicon-16x16.png" sizes="16x16" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -21,11 +21,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <!--
+                        Links to internal pages. For prototype/demo, leave unrestricted. For production, check
+                        login status prior to routing student to the requested page.
+                    -->
+                    <li>@Html.ActionLink("Student", "Report", "RemoteStudent")</li>
+                    <li>@Html.ActionLink("Admin", "Options", "AdminPanel")</li>
+                    <li>@Html.ActionLink("Kiosk", "Index", "Kiosk")</li>
+                    <li>@Html.ActionLink("Login", "Index", "Home")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
