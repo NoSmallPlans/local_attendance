@@ -4,7 +4,7 @@
 
 <h2 id="successMsg" style="display: none; color: green; font-style: italic; font-weight: bold;">@ViewBag.Title</h2>
 
-<form>
+<form style="padding-top: 30px">
   <div class="form-group">
     <label for="exampleFormControlFile1">Upload Excel Calendar</label>
     <input type="file" class="form-control-file">
@@ -22,10 +22,9 @@
     if(fakeSub){
       fakeSub.onclick = function(){calImage.style.display = "block"};
     }
-
     
-    if(fakeSub){
-      fakeSub.onclick = function(){calImage.style.display = "block"};
+    if(successMsg){
+      fakeSub.onclick = function(){successMsg.style.display = "block"};
     }
   }
 </script>
