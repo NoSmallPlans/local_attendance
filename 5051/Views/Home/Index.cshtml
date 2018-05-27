@@ -5,7 +5,7 @@
 }
 <div class="row" style="display: block; width: 50%; margin: auto;">
     <div class="col-md-12">
-        <section id="loginForm" style="background: #4BA9EF; padding: 10px 40px; border-radius: 10px;>
+        <section id="loginForm" style="background: #4BA9EF; padding: 10px 40px; border-radius: 10px;">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
             @Html.AntiForgeryToken()
