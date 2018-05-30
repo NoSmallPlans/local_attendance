@@ -1,32 +1,100 @@
 @{
-    ViewBag.Title = "Web Student Report";
+
 }
-<style>
-    h2 {
-        text-align: center;
-    }
 
-    th, td {
-        text-align: center;
-    }
 
-    th {
-        background-color: #435AAF;
-        color: white
-    }
-</style>
-<h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
 
-@Html.ActionLink("Attendance History", "StudentHistory", null, new { @class = "btn btn-success" })
-@Html.ActionLink("Choose Avatar", "ChooseAvatar", null, new { @class = "btn btn-success" })
+   
+
+<!--jumbotron here-->
+
+<div class="container">
+    <div class="jumbotron" style="text-align: center">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="~/Content/images/cactus.jpg" class="img-responsive img-rounded" style="width:200px; height:200px" />
+                <p style="text-align:center">JimmyJ</p>
+                @Html.ActionLink("Choose Avatar", "ChooseAvatar", null, new { @class = "btn btn-success" })
+            </div>
+            <div class="col-md-9">
+                <h2>Welcome Jim Jimmerson!</h2>
+                <p>Friday, May 25 2018 </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default" style="text-align:center">
+    <div class="panel-heading">Current Achievements</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 nopadding">
+                <div class="thumbnail">
+                    <img src="~/Content/images/cactus.jpg" style="width: 75px; height:75px">
+                    <div class="caption">
+                        <h5>Ach1</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 nopadding">
+                <div class="thumbnail">
+                    <img src="~/Content/images/cactus.jpg" style="width: 75px; height:75px">
+                    <div class="caption">
+                        <h5>Ach2</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 nopadding">
+                <div class="thumbnail">
+                    <img src="~/Content/images/cactus.jpg" style="width: 75px; height:75px">
+                    <div class="caption">
+                        <h5>Ach3</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 nopadding">
+                <div class="thumbnail">
+                    <img src="~/Content/images/cactus.jpg" style="width: 75px; height:75px">
+                    <div class="caption">
+                        <h5>Ach4</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 nopadding">
+                <div class="thumbnail">
+                    <img src="~/Content/images/cactus.jpg" class="img-rounded" style="width: 75px; height:75px">
+                    <div class="caption">
+                        <h5>Ach5</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 nopaddin">
+                <div class="thumbnail">
+                    <img src="~/Content/images/cactus.jpg" style="width: 75px; height:75px; opacity:.5">
+                    <div class="caption">
+                        <h5>Ach6</h5>
+                        <p>+150 XP<br>Attend 1 more day<br />to unlock!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.ActionLink("All Achievements", "Achievements", null, new { @class = "btn btn-success" })
 <div>
-    <img src="~/Content/images/Student Interface.png" width="960" height="540" />
+    <div class="studentheader3">
+        Level <span class="darkBlue">3 </span>Attender
+    </div>
+</div>
+<div>
+    <h4 style="text-align:center">Progress to Next Level:</h4>
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2" style="text-align: right">
-            <span class="show" >XP</span>
+        <div class="reportColMd2" style="text-align: right">
+            <span class="show">XP</span>
         </div>
         <div class="col-md-8" style="padding:0px 0px">
             <div class="progress progress-striped active">
@@ -35,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-2" style="text-align: left">
+        <div class="col-md-1 nopadding" style="text-align: left">
             <span class="show">270/360</span>
         </div>
 
@@ -44,7 +112,6 @@
 </div>
 
 
-<span class="show">Next Level</span>
 <h2 class="sub-header">This Week's Attendance</h2>
 <div class="table-responsive">
     <table class="table table-striped">
@@ -59,7 +126,7 @@
         </thead>
         <tbody>
             <tr>
-                <td style="color:red;">&#10008</td>
+                <td style="color:red;"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></td>
                 <td style="color:green;">&#10004</td>
                 <td style="color:green;">&#10004</td>
                 <td style="color:green;">&#10004</td>
@@ -67,4 +134,7 @@
             </tr>
         </tbody>
     </table>
+</div>
+<div>
+    @Html.ActionLink("Attendance History", "StudentHistory", null, new { @class = "btn btn-success" })
 </div>
