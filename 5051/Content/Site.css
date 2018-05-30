@@ -83,10 +83,13 @@ textarea {
 }
 #lgn-form-container #form-title {
     text-align: center;
+    color: white;
+    font-size: 26px;
 }
 
 #lgn-form-container #login-btn {
     text-align: center;
     background:#435AAF;
     color: white;
+    border: none;
 }
