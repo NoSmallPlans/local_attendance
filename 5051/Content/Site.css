@@ -59,12 +59,24 @@ textarea {
     text-align: center
 }
 
-.col-md-12 .full-width {
+#lgn-form-container .col-md-12 .full-width {
     width: 50%;
     margin: auto;
     display: block;
 }
 
-#form-title {
+#lgn-form-container input {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+#lgn-form-container {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+#lgn-form-container #form-title {
     text-align: center;
 }
