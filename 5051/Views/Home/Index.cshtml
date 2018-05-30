@@ -4,7 +4,7 @@
     ViewBag.Title = "Attendify";
 }
 
-<div class="row">
+<div id="login-page" class="row">
     <div id="lgn-form-container" class="col-md-12 full-width">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))

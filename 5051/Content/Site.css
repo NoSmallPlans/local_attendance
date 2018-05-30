@@ -93,3 +93,7 @@ textarea {
     color: white;
     border: none;
 }
+
+#login-page {
+    background: #e2e2e2;
+}
