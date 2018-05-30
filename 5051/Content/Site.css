@@ -72,9 +72,14 @@ textarea {
 }
 
 #lgn-form-container {
-    width: 50%;
+    width: 40%;
     display: block;
     margin: auto;
+    background: #4BA9EF;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 300px;
+    margin-top: 40px;
 }
 
 #lgn-form-container #form-title {
