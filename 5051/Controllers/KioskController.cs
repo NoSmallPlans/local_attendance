@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _5051.Backend;
+using _5051.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +13,10 @@ namespace _5051.Controllers
     /// </summary>
     public class KioskController : Controller
     {
+        private StudentCheckinViewModel viewModel = new StudentCheckinViewModel();
+
+        // The Backend Data source
+        private StudentCheckinBackend backend = StudentCheckinBackend.Instance;
 
         /// <summary>
         /// Return the list of students with the status of logged in or out
@@ -19,20 +25,21 @@ namespace _5051.Controllers
         // GET: Kiosk
         public ActionResult Index()
         {
-            // TODO: Add logic...
-            return View();
+            viewModel.CheckinList = backend.Index();
+            return View(viewModel);
         }
 
-        public ActionResult SignedIn()
+        /// <summary>
+        /// This should check in or out
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET: Kiosk/Update/5
+        public ActionResult Update(string id = null)
         {
-            ViewBag.Message = "SignedIn";
-            return View();
-        }
-
-        public ActionResult SignedOut()
-        {
-            ViewBag.Message = "SignedOut";
-            return View();
+            var myData = backend.Read(id);
+            myData.CheckedIn = !myData.CheckedIn;
+            return View(myData);
         }
 
         // GET: Kiosk/SetLogout/5
@@ -60,20 +67,6 @@ namespace _5051.Controllers
 
             return RedirectToAction("Index");
         }
-
-        public ActionResult startLogin()
-        {
-            return RedirectToAction("Options", "AdminPanel");
-        }
-
-        public ActionResult checkIn()
-        {
-            return RedirectToAction("SignedIn", "Kiosk");
-        }
-
-        public ActionResult checkOut()
-        {
-            return RedirectToAction("SignedOut", "Kiosk");
-        }
+        
     }
 }

@@ -122,3 +122,22 @@ textarea {
     padding: 5px 20px;
 }
 
+.navbar .navbar-brand {
+    font-size: 26px;
+}
+
+.navbar .navbar-nav {
+    margin-left: -115px;
+}
+
+.submit-with-icon {
+    background: transparent;
+    color: steelblue;
+    border: 0px;
+    padding: 0;
+    outline: 0;
+}
+
+.gray {
+    opacity: .1;
+}
