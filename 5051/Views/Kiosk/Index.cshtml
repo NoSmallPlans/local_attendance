@@ -30,9 +30,7 @@
     var icons = document.getElementsByClassName("icons");
     if(icons){
         for (var i = 0; i < icons.length; i++) {
-            icons[i].onclick = function(e){
-                e = e || window.event;
-                var target = e.target || e.srcElement;
+            icons[i].onclick = function(){
                 if(this.classList.contains(toggle)) {
                     this.classList.remove(toggle);
                 } else {
