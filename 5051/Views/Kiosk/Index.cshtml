@@ -25,17 +25,16 @@
 </div>
 
 <script>
-
-  function toggleOpacity(event) {
-    event.target.classList.add("gray");
-  }
-
   window.onload = function(){
 
     var icons = document.getElementsByClassName("icons");
     if(icons){
         for (var i = 0; i < icons.length; i++) {
-            icons[i].onclick = toggleOpacity();
+            icons[i].onclick = function(e){
+                e = e || window.event;
+                var target = e.target || e.srcElement;
+                this.classList.add("gray");
+            }
         }
     }
   }
