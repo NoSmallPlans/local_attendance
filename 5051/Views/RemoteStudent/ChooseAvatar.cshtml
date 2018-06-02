@@ -6,6 +6,7 @@
     ViewBag.Title = "Avatar Selection";
     <p>Name = @Model.Name</p>
 }
+<!--
 <style>
     caption {
         text-align: center;
@@ -82,6 +83,7 @@
        <p>@item</p>
     }
 }
+
 <nav aria-label="More Avatars" style="text-align: center">
     <ul class="pagination">
         <li class="page-item"><a class="page-link" href="#"><<</a></li>
@@ -91,21 +93,22 @@
         <li class="page-item"><a class="page-link" href="#">>></a></li>
     </ul>
 </nav>
+-->
 
 @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
-            @Html.HiddenFor(m => m.Id, new {Value = @model.Id})
-            @Html.HiddenFor(m => m.Name, new {Value = @model.Name})
-            @Html.HiddenFor(m => m.Username, new {Value = @model.Username})
+            @Html.HiddenFor(m => m.Id, new {Value = @Model.Id})
+            @Html.HiddenFor(m => m.Name, new {Value = @Model.Name})
+            @Html.HiddenFor(m => m.Username, new {Value = @Model.Username})
             @Html.HiddenFor(m => m.AvatarId, new {Value = "Taco"})
-            @Html.HiddenFor(m => m.IsActive, new {Value = @model.IsActive})
-            @Html.HiddenFor(m => m.IsEdit, new {Value = @model.IsEdit})
-            @Html.HiddenFor(m => m.LoginStatus, new {Value = @model.LoginStatus})
-            @Html.HiddenFor(m => m.DailyStatus, new {Value = @model.DailyStatus})
-            @Html.HiddenFor(m => m.TimeIn, new {Value = @model.TimeIn})
-            @Html.HiddenFor(m => m.TimeOut, new {Value = @model.TimeOut})
-            @Html.HiddenFor(m => m.Password, new {Value = @model.Password})
+            @Html.HiddenFor(m => m.IsActive, new {Value = @Model.IsActive})
+            @Html.HiddenFor(m => m.IsEdit, new {Value = @Model.IsEdit})
+            @Html.HiddenFor(m => m.LoginStatus, new {Value = @Model.LoginStatus})
+            @Html.HiddenFor(m => m.DailyStatus, new {Value = @Model.DailyStatus})
+            @Html.HiddenFor(m => m.TimeIn, new {Value = @Model.TimeIn})
+            @Html.HiddenFor(m => m.TimeOut, new {Value = @Model.TimeOut})
+            @Html.HiddenFor(m => m.Password, new {Value = @Model.Password})
             
             <div class="row">
                 <div class="col-sm-3 text-right">
