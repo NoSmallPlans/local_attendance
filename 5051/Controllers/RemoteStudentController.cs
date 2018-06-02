@@ -70,6 +70,7 @@ namespace _5051.Controllers
                                         "TimeOut,"+
                                         "")] StudentModel data)
         {
+            /*
             if (!ModelState.IsValid)
             {
                 // Send back for edit
@@ -79,8 +80,7 @@ namespace _5051.Controllers
             if (data == null)
             {
                 // Send to Error Page
-                return RedirectToAction("Index");
-                //return RedirectToAction("Error", new { route = "Home", action = "Error" });
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
                 
             }
 
@@ -92,6 +92,7 @@ namespace _5051.Controllers
 
             // Make it official
             StudentBackend.Update(data);
+            */
 
             return RedirectToAction("Index");
         }
