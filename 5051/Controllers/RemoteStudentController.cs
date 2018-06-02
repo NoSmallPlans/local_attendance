@@ -89,16 +89,6 @@ namespace _5051.Controllers
 
             return RedirectToAction("Report");
         }
-
-        //public ActionResult ChooseAvatar()
-       // {
-         //   
-        //}
-        //Returns student history page
-        public ActionResult StudentHistory()
-        {
-            return View();
-        }
  
         //public ActionResult ChooseAvatar()
        // {
