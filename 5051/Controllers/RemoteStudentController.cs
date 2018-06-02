@@ -46,7 +46,7 @@ namespace _5051.Controllers
             var StudentModel = new StudentModel(StudentViewModel.StudentList[0]);
             ViewBag.avatar_names = avatar_names;
             
-            return View(StudentModel, StudentViewModel);
+            return View(StudentModel);
         }
 
                  // NOTE: Scott, thanks for the code
