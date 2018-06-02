@@ -81,7 +81,9 @@ namespace _5051.Controllers
             if (data == null)
             {
                 // Send to Error Page
+                Debug.log("hi, data is null");
                 return RedirectToAction("Error", new { route = "Home", action = "Error" });
+                
             }
 
             if (string.IsNullOrEmpty(data.Id))
