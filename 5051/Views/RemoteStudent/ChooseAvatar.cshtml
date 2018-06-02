@@ -1,4 +1,5 @@
 ﻿@model _5051.Models.StudentModel
+@models _5051.Models.StudentViewModels
 
 <!--need to fix the image spacing -->
 
@@ -6,7 +7,7 @@
     ViewBag.Title = "Avatar Selection";
     <p>Name = @Model.Name</p>
 }
-<!--
+
 <style>
     caption {
         text-align: center;
@@ -93,7 +94,6 @@
         <li class="page-item"><a class="page-link" href="#">>></a></li>
     </ul>
 </nav>
--->
 
 @using (Html.BeginForm())
         {
