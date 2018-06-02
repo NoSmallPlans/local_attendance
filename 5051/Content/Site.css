@@ -138,8 +138,30 @@ textarea {
     outline: 0;
 }
 
+#kiosk-container {
+    display: block;
+    margin: auto;
+    background: #4BA9EF;
+    border-radius: 10px;
+    padding: 20px 40px;
+    margin-top: 40px;
+}
+
+#kiosk-container #kiosk-title {
+    text-align: center;
+    color: white;
+    font-size: 26px;
+}
+
+.kiosk-avatar {
+    background: #E8E8E8;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+}
+
 .checked-in {
-    opacity: .1;
+    opacity: .25;
 }
 
 .badge-small { 

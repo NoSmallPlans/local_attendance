@@ -49,8 +49,7 @@ namespace _5051.Controllers
             return View(StudentModel);
         }
 
-
-         // NOTE: Scott, thanks for the code
+                 // NOTE: Scott, thanks for the code
         /// <summary>
         /// Choose avatar and update the student model
         /// </summary>
@@ -68,9 +67,10 @@ namespace _5051.Controllers
                                         "DailyStatus,"+
                                         "TimeIn,"+
                                         "TimeOut,"+
+                                        "Username,"+
                                         "")] StudentModel data)
         {
-            /*
+            
             if (!ModelState.IsValid)
             {
                 // Send back for edit
@@ -92,7 +92,6 @@ namespace _5051.Controllers
 
             // Make it official
             StudentBackend.Update(data);
-            */
 
             return RedirectToAction("Report");
         }
