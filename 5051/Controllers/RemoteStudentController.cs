@@ -94,7 +94,7 @@ namespace _5051.Controllers
             StudentBackend.Update(data);
             */
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Report");
         }
 
         //public ActionResult ChooseAvatar()
