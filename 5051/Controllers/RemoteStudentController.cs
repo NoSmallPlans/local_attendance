@@ -99,8 +99,7 @@ namespace _5051.Controllers
         {
             return View();
         }
-    }
-
+ 
         //public ActionResult ChooseAvatar()
        // {
          //   
