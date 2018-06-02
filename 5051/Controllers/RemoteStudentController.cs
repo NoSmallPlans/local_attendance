@@ -61,7 +61,6 @@ namespace _5051.Controllers
         public ActionResult ChooseAvatar([Bind(Include=
                                         "Id,"+
                                         "Name,"+
-                                        "Username,"+
                                         "AvatarId,"+
                                         "IsActive,"+
                                         "IsEdit,"+
@@ -69,7 +68,6 @@ namespace _5051.Controllers
                                         "DailyStatus,"+
                                         "TimeIn,"+
                                         "TimeOut,"+
-                                        "Password,"+
                                         "")] StudentModel data)
         {
             if (!ModelState.IsValid)
@@ -81,7 +79,6 @@ namespace _5051.Controllers
             if (data == null)
             {
                 // Send to Error Page
-                Debug.log("hi, data is null");
                 return RedirectToAction("Error", new { route = "Home", action = "Error" });
                 
             }
@@ -91,7 +88,6 @@ namespace _5051.Controllers
                 // Return back for Edit
                 return View(data);
             }
-
 
             // Make it official
             StudentBackend.Update(data);
