@@ -68,7 +68,6 @@ namespace _5051.Controllers
             if (!ModelState.IsValid)
             {
                 // Send back for edit
-                return RedirectToAction("Valid", new { route = "Home", action = "Error" });
                 return View(data);
             }
 
@@ -82,7 +81,6 @@ namespace _5051.Controllers
             if (string.IsNullOrEmpty(data.Id))
             {
                 // Return back for Edit
-                return RedirectToAction("NullOrEmpty", new { route = "Home", action = "Error" });
                 return View(data);
             }
 
