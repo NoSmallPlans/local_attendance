@@ -8,6 +8,10 @@ using _5051.Backend;
 
 namespace _5051.Controllers
 {
+    /// <summary>
+    /// Remote student controller handles the landing page the student will see
+    /// after logging in remotely.
+    /// </summary>
     public class RemoteStudentController : Controller
     {
         // A ViewModel used for the Student that contains the StudentList
@@ -15,7 +19,12 @@ namespace _5051.Controllers
 
         // The Backend Data source
         private StudentBackend StudentBackend = StudentBackend.Instance;
-        // GET: /AdminPanel/Options/someName
+        /// <summary>
+        /// Render page of student report with the first student in student list
+        /// queried for student data on page
+        /// </summary>
+        /// <returns>Report Page</returns>
+        /// GET: /RemoteStudent/Report
         public ActionResult Report()
         {
             // Query backend to refresh every time Index() is called
@@ -25,13 +34,21 @@ namespace _5051.Controllers
 
             return View(StudentModel);
         }
-        //Return Achievements page
+        /// <summary>
+        /// Renders page of all available achievements
+        /// </summary>
+        /// <returns>Achievement Page</returns>
+        /// GET: /RemoteStudent/Achievements
         public ActionResult Achievements()
         {
             return View();
         }
-        
-        //Returns Avatar select page
+
+        /// <summary>
+        /// Render a list of avatars queried from the backend
+        /// </summary>
+        /// <returns>Choose Avatar View Page</returns>
+        /// GET: /RemoteStudent/ChooseAvatar
         public ActionResult ChooseAvatar()
         {
             
@@ -43,12 +60,12 @@ namespace _5051.Controllers
             return View(StudentModel);
         }
 
-                         // NOTE: Scott, thanks for the code
+                         /// NOTE: Scott, thanks for the code
         /// <summary>
         /// Choose avatar and update the student model
         /// </summary>
         /// <param name="data"></param>
-        /// <returns></returns>
+        /// <returns>A redirect to the updated report</returns>
         // POST: Student/ChooseAvatar
         [HttpPost]
         public ActionResult ChooseAvatar([Bind(Include=
@@ -97,7 +114,7 @@ namespace _5051.Controllers
         /// </summary>
         /// <param name="id"></param> Student ID
         /// <returns></returns>
-        // GET: RemoteStudent/StudentHistory/5
+        // GET: RemoteStudent/StudentHistory/
         public ActionResult StudentHistory(string id = null)
         {
             // Query our backend backend

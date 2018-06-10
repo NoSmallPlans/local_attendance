@@ -1,209 +1,172 @@
 ﻿
-<h1 class="text-center">Achievements</h1>
-    <div class="container-fluid ">
-        <div class="row badge-panel-row-padding badge-panel-color img-rounded">
-            <div class="col-md-4 ">
-                <h2 class="badge-header-bold text-center">Level</h2>
-                <div class="panel panel-default badge-panel-padding">
-                    <div class="panel-body">
-                        <div class="container text-center">
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/level 1_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">Level 1</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/level 2_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">Level 2</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/level 3_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">Level 3</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/level 4_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">Level 4</div>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/level 5_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">Level 5</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/level 6_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">Level 6</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/locked_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">????</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/locked_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">????</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>       
-                    </div>
+<div class="container student-report-container">
+    <div class="row">
+        <div class="col-sm-2"id="student-report-btn-back">
+            @Html.ActionLink("Back", null, null, null, new { href = Request.UrlReferrer, @class = "btn btn-primary btn-sm"})
+        </div>
+        <div class="col-md-8">
+            <h1 class="text-center student-report-font-h1">All Achievements</h1>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="container badge-panel-container text-center">
+        <span class="report-header-white text-center">Levels</span>
+        <div class="row">
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded">
+                    <img src="~/Content/images/no-title_lvl1.png" class="badge-medium">
+                    <div class="caption bold-caption">Level 1</div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <h2 class="badge-header-bold text-center">Cumulative</h2>
-                <div class="panel panel-default badge-panel-padding">
-                    <div class="panel-body">
-                        <div class="container text-center">
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/25 hours_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">25 Hours</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/50 hours_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">50 Hours</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/100 hours_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">100 Hours</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/200 hours_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">200 Hours</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/350 hours_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">350 Hours</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/500 hours_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">500 Hours</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/locked_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">????</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/locked_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">????</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded">
+                    <img src="~/Content/images/no-title_lvl2.png" class="badge-medium">
+                    <div class="caption bold-caption">Level 2</div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <h2 class="badge-header-bold text-center">Streaks</h2>
-                <div class="panel panel-default badge-panel-padding">
-                    <div class="panel-body">
-                        <div class="container text-center">
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/2 day streak_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">2 Day Streak</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/3 day streak_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">3 Day Streak</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/5 day streak_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">5 Day Streak</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/7 day streak_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">7 Day Streak</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div>
-                                        <img src="~/Content/images/10 day streak_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">10 Day Streak</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/14 day streak_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">14 Day Streak</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row badge-panel-row-padding">
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/locked_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">????</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="badge-locked">
-                                        <img src="~/Content/images/locked_resized.png" class="badge-small" />
-                                        <div class="caption bold-caption">????</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded">
+                    <img src="~/Content/images/no-title_lvl3.png" class="badge-medium">
+                    <div class="caption bold-caption">Level 3</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/no-title_lvl4.png" class="badge-medium">
+                    <div class="caption bold-caption">Level 4</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/no-title_lvl5.png" class="badge-medium">
+                    <div class="caption bold-caption">Level 5</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/no-title_lvl6.png" class="badge-medium">
+                    <div class="caption bold-caption">Level 6</div>
+                </div>
+            </div>
+        </div>
+        <span class="report-header-white text-center">Hours</span>
+        <div class="row">
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded">
+                    <img src="~/Content/images/no-title_25hrs.png" class="badge-medium">
+                    <div class="caption bold-caption">25 Hours</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="badge-white-bg-rounded">
+                    <img src="~/Content/images/no-title_50hrs.png" class="badge-medium">
+                    <div class="caption bold-caption">50 Hours</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded">
+                    <img src="~/Content/images/no-title_100hrs.png" class="badge-medium">
+                    <div class="caption bold-caption">100 Hours!</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded">
+                    <img src="~/Content/images/no-title_200hrs.png" class="badge-medium">
+                    <div class="caption bold-caption">200 Hours</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/no-title_350hrs.png" class="badge-medium">
+                    <div class="caption bold-caption">350 Hours</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/no-title_500hrs.png" class="badge-medium">
+                    <div class="caption bold-caption">500 Hours</div>
+                </div>
+            </div>
+        </div>
+        <span class="report-header-white text-center">Streaks</span>
+        <div class="row">
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded">
+                    <img src="~/Content/images/no-title_2daystreak.png" class="badge-medium">
+                    <div class="caption bold-caption">2 Day Streak</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded">
+                    <img src="~/Content/images/no-title_3daystreak.png" class="badge-medium">
+                    <div class="caption bold-caption">3 Day Streak</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/no-title_5daystreak.png" class="badge-medium">
+                    <div class="caption bold-caption">5 Day Streak</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/no-title_7daystreak.png" class="badge-medium">
+                    <div class="caption bold-caption">7 Day Streak</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/no-title_10daystreak.png" class="badge-medium">
+                    <div class="caption bold-caption">10 Day Streak</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/no-title_14daystreak.png" class="badge-medium">
+                    <div class="caption bold-caption">14 Day Streak</div>
+                </div>
+            </div>
+        </div>
+        <span class="report-header-white text-center">Bonus</span>
+        <div class="row">
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/locked_resized.png" class="badge-medium">
+                    <div class="caption bold-caption">????</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/locked_resized.png" class="badge-medium">
+                    <div class="caption bold-caption">????</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/locked_resized.png" class="badge-medium">
+                    <div class="caption bold-caption">????</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/locked_resized.png" class="badge-medium">
+                    <div class="caption bold-caption">????</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/locked_resized.png" class="badge-medium">
+                    <div class="caption bold-caption">????</div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="badge-white-bg-rounded badge-locked">
+                    <img src="~/Content/images/locked_resized.png" class="badge-medium">
+                    <div class="caption bold-caption">????</div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
+</div>

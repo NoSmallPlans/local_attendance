@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6
 }
 
 .badge-small { 
-    width: 85%;
+    width: 100%;
     height: auto;
 }
 .badge-small-special {
@@ -218,14 +218,18 @@ h1, h2, h3, h4, h5, h6
     background: #e2e2e2;
 }
 
-.badge-panel-row-padding{
-    padding-bottom: 25px;
+.badge-panel-row-padding {
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px;
 }
 .badge-panel-padding {
-    padding-bottom:50px;
+    padding-bottom: 0px;
 }
 .badge-panel-padding-alt {
-    padding-bottom: 64px
+    padding-bottom: 0px
 }
 .badge-header-bold {
     font-weight: bold;
@@ -234,6 +238,7 @@ h1, h2, h3, h4, h5, h6
 }
 .bold-caption {
     font-weight: bold;
+    
 }
 
 .badge-locked {
@@ -241,18 +246,20 @@ h1, h2, h3, h4, h5, h6
 }
 
 .red-x {
-    color:red;
     text-align: center;
-
+    height: 15%;
+    width: auto;
 }
 .orange-alert {
-    color:orange;
     text-align: center;
+    height: 15%;
+    width: auto;
 }
 
-.green-check {
-    color:green;
-    text-align:center;
+.blue-check {
+    text-align: center;
+    height: 15%;
+    width: auto;
 }
 
 /* Override bootstrap buttons */
@@ -263,14 +270,8 @@ h1, h2, h3, h4, h5, h6
     border: none;
 }
 
-.btn-admin-wide-left {
-    width: 60%;
-    float: left;
-}
-
-.btn-admin-wide-right {
-    width: 60%;
-    float: right;
+.btn-admin {
+    width: 80%;
 }
 
 #admin-container {
@@ -318,6 +319,11 @@ h1, h2, h3, h4, h5, h6
     text-align: center;
 }
 
+.admin-font-h3 {
+    color: white;
+    padding-bottom: 15px;
+}
+
 .admin-font-h4 {
     color: white;
     padding-left: 15px;
@@ -336,18 +342,18 @@ h1, h2, h3, h4, h5, h6
     width: 450px;
     height: 400px;
     border: 2px solid white;
-    border-radius:3px;
+    border-radius:10px;
 
 }
 .badge-panel-color {
     background: #435AAF;
 }
 .avatar-student-profile {
-    width: 200px;
+    width: 180px;
     height: auto;
 }
 .badge-medium {
-    width: 85%;
+    width: 100%;
     height: auto;
 }
 .progress-bar-default {
@@ -355,6 +361,225 @@ h1, h2, h3, h4, h5, h6
     text-align: right
 }
 
+#classReportChart {
+    width: 100%;
+}
 #chartContainer1 {
     width: 100%;
 }
+#chartContainer2 {
+    width: 100%
+}
+.class-report-graph {
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+#class-report-container {
+    display: block;
+    margin: auto;
+    background: #4BA9EF;
+    border-radius: 10px;
+    padding: 15px 25px 25px 25px;
+    margin-top: 35px;
+    height: 525px;
+}
+
+#goals-container {
+    display: block;
+    margin: auto;
+    background: #4BA9EF;
+    border-radius: 10px;
+    padding: 5px 50px 20px 50px;
+    margin-top: 60px;
+    width: 50%;
+}
+
+.goals-font-h2 {
+    color: white;
+    text-align: center;
+}
+
+.goals-font-h3 {
+    color: white;
+}
+
+.goals-font-h4 {
+    color: white;
+}
+
+.goal-checkbox {
+    text-align:left;
+    border-radius:0;
+}
+.badge-white-bg-rounded {
+    background: white;
+    border-radius: 15px;
+    
+}
+
+#student-history-container {
+    display: block;
+    margin: auto;
+    background: #4BA9EF;
+    border-radius: 10px;
+    padding: 5px 30px 30px 30px;
+    margin-top: 60px;
+}
+
+#student-history-calendar {
+    display: block;
+    margin: auto;
+    background: #435AAF;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 0px;
+}
+
+.student-font-h1 {
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin: 1%;
+}
+
+.student-font-h2 {
+    color: white;
+    text-align: center;
+}
+
+.student-font-h3 {
+    color: white;
+    text-align: center;
+}
+
+.student-font-h4 {
+    color: white;
+    text-align: center;
+}
+
+.student-font {
+    color: white;
+}
+
+#student-history-btn-back {
+    display: block;
+    margin-top: 3%;
+    padding-left: 3px;
+}
+
+#student-report-btn-back {
+    display: block;
+    margin-top: 25px;
+    margin-left: 0px;
+    padding-left: 15px; 
+}
+
+#student-report-container {
+    display: block;
+    margin: auto;
+    background: #4BA9EF;
+    border-radius: 10px;
+    padding: 5px 25px 25px 25px;
+    margin-top: 60px;
+}
+
+.student-report-font-h1 {
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin: 3%;
+}
+
+#class-report-btn-back {
+    display: block;
+    margin-top: 25px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.badge-report-padding {
+    margin: 10px;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+.student-report-container {
+    display: block;
+    margin: auto;
+    background: #4BA9EF;
+    border-radius: 10px;
+    padding: 30px 30px 30px 30px;
+    margin-top: 30px;
+}
+.badge-panel-container {
+    background: #435AAF;
+    border-radius: 10px;
+    padding: 30px;
+}
+.report-header {
+    color: white;
+    background: #4BA9EF;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.report-header-white {
+    color:white;
+    font-size: 32px;
+}
+.report-button-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.report-attendance-panel {
+    border: 0;
+    background: #435AAF;
+    border-radius: 10px;
+}
+.report-experience-panel {
+    border: 0;
+    background: #435AAF;
+    color:white;
+    border-radius: 10px;
+    margin-bottom:20px;
+    margin-top:20px;
+
+}
+.report-attendance-text {
+    color: white;
+    text-align: center
+    
+}
+.low-gutter {
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.borderless td, .borderless th{
+    border: none;
+}
+.student-font-medium {
+    color: white;
+    font-size: 20px;
+}
+
+.row-top-extended {
+    margin-top: 20px;
+}
+
+.top-margin-adjust {
+    margin-top: 3px;
+}
+
+.badge-top{
+   padding: 0px 0px 0px 0px;
+}
+.student-font-darkBlue {
+    color: darkblue;
+    font-size: 20px;
+}
+

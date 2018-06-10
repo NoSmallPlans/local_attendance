@@ -1,63 +1,82 @@
-﻿<!-- TODO: Add real functionality to this page... -->
+﻿<!-- Probably a brute-force way of implementing this... -->
 
-<!-- Probably a brute-force way of implementing this... -->
-<br />
-<br />
-<div class="row">
-    @Html.ActionLink("Back", "GoBack", null, new { @class = "btn btn-primary" })
+<div class="container-responsive" id="class-report-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2" id="class-report-btn-back">
+                @Html.ActionLink("Back", "GoBack", null, new { @class = "btn btn-primary btn-sm" })
+            </div>
+            <div class="col-sm-8">
+                <h2 class="text-center admin-font-h2">Class Attendance Report</h2>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <div id="classReportChart" class="class-report-graph"></div>
 </div>
-
-<br />
 
 <script>
     window.onload = function () {
-        var chart1 = new CanvasJS.Chart("chartContainer1", {
+        var chart1 = new CanvasJS.Chart("classReportChart", {
             theme: "theme2",
             animationEnabled: true,
-            title: {
-                text: "Class Report",
-                fontSize: 18
-            },
 
             axisX: {
                 title: "Days",
                 titleFontSize: 18,
+                minimum: 0,
+                maximum: 91,
                 crosshair: {
                     enabled: true,
                     snapToDataPoint: true
                 }
             },
             axisY: {
-                title: "Hours Attended",
-                titleFontSize: 18
+                title: "Hours",
+                titleFontSize: 18,
+                minimum: 0,
+                maximum: 300,
+                stripLines: [
+                    {
+                        startValue: 200,
+                        endValue: 300,
+                        opacity: .25,
+                        color: "#00e600",
+                    },
+                ],
             },
             legend: {
-                horizontalAlign: "left", // "center" , "right"
-                verticalAlign: "center",  // "top" , "bottom"
+                horizontalAlign: "center", // "center" , "right", "left"
+                verticalAlign: "bottom",  // "top" , "bottom", "center"
                 fontSize: 15
             },
             data: [
                 {
                     type: "line", //change type to bar, line, area, pie, etc
                     showInLegend: true,
+                    lineDashType: "dash",
+                    color: "#FF0000",
                     legendText: "Expected",
+                    markerType: "none",
+                    toolTipContent: "{legendText} <br/> Days: {x} <br/>  Hours: {y}",
                     dataPoints: [
                         { x: 0, y: 0 },
-                        { x: 10, y: 30 },
-                        { x: 20, y: 60 },
-                        { x: 30, y: 90 },
-                        { x: 40, y: 120 },
-                        { x: 50, y: 150 },
-                        { x: 60, y: 180 },
-                        { x: 70, y: 210 },
-                        { x: 80, y: 240 },
-                        { x: 90, y: 270 }
+                        { x: 10, y: 33.333 },
+                        { x: 20, y: 66.666 },
+                        { x: 30, y: 100 },
+                        { x: 40, y: 133.333 },
+                        { x: 50, y: 166.666 },
+                        { x: 60, y: 200 },
+                        { x: 70, y: 233.333 },
+                        { x: 80, y: 266.6666 },
+                        { x: 90, y: 300 }
                     ]
                 },
                 {
                     type: "line", //change type to bar, line, area, pie, etc
                     showInLegend: true,
                     legendText: "Scott",
+                    toolTipContent: "{legendText} <br/> Days: {x} <br/>  Hours: {y}",
                     dataPoints: [
                         { x: 0, y: 0 },
                         { x: 10, y: 25 },
@@ -75,6 +94,7 @@
                     type: "line", //change type to bar, line, area, pie, etc
                     showInLegend: true,
                     legendText: "Maggie",
+                    toolTipContent: "{legendText} <br/> Days: {x} <br/>  Hours: {y}",
                     dataPoints: [
                         { x: 0, y: 0 },
                         { x: 10, y: 20 },
@@ -85,13 +105,14 @@
                         { x: 60, y: 150 },
                         { x: 70, y: 180 },
                         { x: 80, y: 200 },
-                        { x: 90, y: 225 }
+                        { x: 90, y: 230 }
                     ]
                 },
                 {
                     type: "line", //change type to bar, line, area, pie, etc
                     showInLegend: true,
                     legendText: "Kevin",
+                    toolTipContent: "{legendText} <br/> Days: {x} <br/>  Hours: {y}",
                     dataPoints: [
                         { x: 0, y: 0 },
                         { x: 10, y: 15 },
@@ -109,6 +130,7 @@
                     type: "line", //change type to bar, line, area, pie, etc
                     showInLegend: true,
                     legendText: "Andrew W",
+                    toolTipContent: "{legendText} <br/> Days: {x} <br/>  Hours: {y}",
                     dataPoints: [
                         { x: 0, y: 0 },
                         { x: 10, y: 10 },
@@ -119,13 +141,14 @@
                         { x: 60, y: 132 },
                         { x: 70, y: 152 },
                         { x: 80, y: 179 },
-                        { x: 90, y: 200 }
+                        { x: 90, y: 220 }
                     ]
                 },
                 {
                     type: "line", //change type to bar, line, area, pie, etc
                     showInLegend: true,
                     legendText: "Andrew C",
+                    toolTipContent: "{legendText} <br/> Days: {x} <br/>  Hours: {y}",
                     dataPoints: [
                         { x: 0, y: 0 },
                         { x: 10, y: 30 },
@@ -136,13 +159,14 @@
                         { x: 60, y: 114 },
                         { x: 70, y: 135 },
                         { x: 80, y: 167 },
-                        { x: 90, y: 187 }
+                        { x: 90, y: 205 }
                     ]
                 },
                 {
                     type: "line", //change type to bar, line, area, pie, etc
                     showInLegend: true,
                     legendText: "Mike",
+                    toolTipContent: "{legendText} <br/> Days: {x} <br/>  Hours: {y}",
                     dataPoints: [
                         { x: 0, y: 0 },
                         { x: 10, y: 30 },
@@ -153,7 +177,7 @@
                         { x: 60, y: 170 },
                         { x: 70, y: 200 },
                         { x: 80, y: 220 },
-                        { x: 90, y: 230 }
+                        { x: 90, y: 240 }
                     ]
                 }
             ]
@@ -161,8 +185,3 @@
         chart1.render();
     };
 </script>
-
-
-<div class="container-responsive">
-    <div id="chartContainer1" class="student-report-graph"></div>
-</div>

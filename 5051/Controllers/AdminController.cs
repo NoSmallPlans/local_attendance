@@ -8,6 +8,9 @@ using _5051.Backend;
 
 namespace _5051.Controllers 
 {
+    /// <summary>
+    /// The Admin controller handles all functionality related to the admin interface.
+    /// </summary>
     public class AdminController : Controller
     {
         // A ViewModel used for the Student that contains the StudentList
@@ -262,6 +265,16 @@ namespace _5051.Controllers
         {
             var myData = new StudentModel();
             return View(myData);
+        }
+
+        /// <summary>
+        /// Redirects the admin to the goals page where they can set class goals.
+        /// </summary>
+        /// <returns></returns>
+        // GET: /Admin/Goals
+        public ActionResult Goals()
+        {
+            return View();
         }
 
         /// <summary>
