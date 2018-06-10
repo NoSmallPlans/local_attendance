@@ -40,8 +40,8 @@
             for (var i = 0; i < icons.length; i++) {
                 icons[i].onclick = function () {
                     document.getElementById("avatarID").value = this.getAttribute("avID");
-                    this.classList.add(toggle);
                     if(selection) selection.classList.remove(toggle);
+                    this.classList.add(toggle);
                     selection = this;
                 }
             }
